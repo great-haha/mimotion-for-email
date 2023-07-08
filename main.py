@@ -22,7 +22,7 @@ set_push = [True]
 # 以下如果看不懂直接默认就行只需改上面
 
 # 系数K查询到天气后降低步数比率，如查询得到设置地区为多云天气就会在随机后的步数乘0.9作为最终修改提交的步数
-K_dict = {"多云": 0.95, "阴": 0.9, "小雨": 0.7, "中雨": 0.5, "大雨": 0.4, "暴雨": 0.3, "大暴雨": 0.2, "特大暴雨": 0.2}
+K_dict = {"多云": 0.95, "阴": 0.9, "小雨": 0.9, "中雨": 0.9, "大雨": 0.9, "暴雨": 0.8, "大暴雨": 0.8, "特大暴雨": 0.8}
 
 # 北京时间
 time_bj = datetime.datetime.today() + datetime.timedelta(hours=8)
@@ -84,8 +84,10 @@ def getBeijinTime():
         print(min_ratio)
         print(max_ratio)
         max_ratio = int(hour)
-        min_1 = 3300 * min_ratio
-        max_1 = 3300 * max_ratio
+        # min_1 = 4500 * min_ratio
+        # max_1 = 3500 * max_ratio
+        min_1 = 22500
+        max_1 = 33250
         min_1 = int(K * min_1)
         max_1 = int(K * max_1)
         print("天气系数是")
