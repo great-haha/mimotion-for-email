@@ -71,4 +71,7 @@
 
 **7. 本人业余，东拼西凑机缘巧合做成的，反馈问题本人不会处理**
 
+# 七、本项目Fork别人的项目
+**1. 原项目：https://github.com/great-otto/mimotion-for-email/tree/main/.github/workflows**
 
+**2. 感谢该项目提供者**
