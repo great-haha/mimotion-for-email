@@ -81,7 +81,7 @@ def getBeijinTime():
         find = re.search(pattern, result)
         print("find:"+find)
         hour = find.group(1)
-        print("hour:"+hour)
+        print("hour:"+str(hour))
         min_ratio = max(math.ceil((int(hour) / 3) - 1), 0)
         max_ratio = math.ceil(int(hour) / 3)
         print(min_ratio)
