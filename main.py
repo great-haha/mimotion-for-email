@@ -212,7 +212,7 @@ def main(_user, _passwd, min_1, max_1):
 
     data = f'userid={userid}&last_sync_data_time=1597306380&device_type=0&last_deviceid=DA932FFFFE8816E7&data_json={data_json}'
 
-    # response = requests.post(url, data=data, headers=head).json()
+    response = requests.post(url, data=data, headers=head).json()
     # print(response)
     result = f"[{now}]\n\n{user[:3]}****{user[7:]} 改步（{step}）\\[" + response['message'] + "]\n\n"
     print(result)
