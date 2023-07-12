@@ -76,21 +76,18 @@ def getBeijinTime():
     if r.status_code == 200:
         result = r.text
         a = set_push
-        print("result:"+result)
         pattern = re.compile('nhrs=(\\d+)')
         find = re.search(pattern, result)
-        print("find:"+str(find))
         hour = find.group(1)
-        print("hour:"+str(hour))
         min_ratio = max(math.ceil((int(hour) / 3) - 1), 0)
         max_ratio = math.ceil(int(hour) / 3)
         print(min_ratio)
         print(max_ratio)
-        max_ratio = int(hour)
-        # min_1 = 4500 * min_ratio
-        # max_1 = 3500 * max_ratio
-        min_1 = 18500
-        max_1 = 22500
+        # max_ratio = int(hour)
+        min_1 = 9000 * min_ratio
+        max_1 = 7500 * max_ratio
+        # min_1 = 18500
+        # max_1 = 22500
         min_1 = int(K * min_1)
         max_1 = int(K * max_1)
         print("天气系数是")
